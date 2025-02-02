@@ -22,8 +22,8 @@ function NavBar() {
 
         return(
             <div className = "flex justify-between items-center">
-                <a href = "#Home"><img id = "myLogo" alt = "Website Logo" src={Logo} className="size-16 navbar-elements"></img></a>
-                <ul className="space-x-5 text-xl my-3 hidden sm:flex">
+                <a href = "#Home"><img id = "myLogo" alt = "Website Logo" src={Logo} className="size-16 z-50 navbar-elements"></img></a>
+                <ul className="font-montserrat space-x-5 text-xl my-3 z-50 hidden sm:flex">
                     <li className="navbar-elements"><a href= "#Home">home</a></li>
                     <li className="navbar-elements"><a href= "#Skills">skills</a></li>
                     <li className="navbar-elements"><a href= "#Projects">projects</a></li>
@@ -34,8 +34,8 @@ function NavBar() {
                     {nav ? <img id = "hamburgerLogo" src = {HamburgerMenu} className="size-10 navbar-elements mr-2 justify-end"></img> 
                         : <img id = "hamburgerLogo" src = {HamburgerClose} className="size-10 navbar-elements mr-2 justify-end"></img>}
                 </div>
-                <div className={!nav ? "z-1000 fixed left-0 top-0 w-[60%] h-full shadow-md ease-in-out duration-200 bg-white sm:hidden" :
-                    "z-1000 fixed top-0 left-[-100%] animate-ease-in-out duration-1000 w-[60%] h-full bg-white shadow-md sm:hidden"}>
+                <div className={!nav ? "font-montserrat fixed left-0 top-0 w-[60%] h-full shadow-md ease-in-out duration-200 bg-gray-50 z-50 sm:hidden" :
+                    "font-montserrat fixed top-0 left-[-100%] animate-ease-in-out duration-1000 w-[60%] h-full bg-gray-50 shadow-md z-50 sm:hidden"}>
                     <ul className="flex-col pt-24 space-y-5 text-xl pl-6 inline-block">
                         <li className="navbar-elements"><a href= "#Home" onClick = {handleNav}>home</a></li>
                         <li className="navbar-elements"><a href= "#Skills" onClick = {handleNav}>skills</a></li>

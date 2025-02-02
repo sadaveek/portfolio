@@ -7,13 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        palette1: '#000B58',
-        palette2: '#003161',
-        palette3: '#006A67',
-        palette4: '#FFF4B7',
-        palette4dark: '#D2CA9D',
-        background1: '#023234',
-        background2: '#010B1D'
+        palette1: '#119DA4',
+        palette2: '#0C7489',
+        palette3: '#13505B',
+        palette4: '#040404',
+        palette5: '#D7D9CE',
+      },
+      fontFamily: {
+        barlow: ['Barlow Condensed', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       }
     },
   },
