@@ -1,7 +1,10 @@
 function Skills() {
     return(
-        <div id = "Skills" className="flex h-screen w-auto text-center justify-center items-center text-7xl bg-gradient-to-b from-palette2 to-palette3">
-            <p>Skills Test</p>
+        <div id = "Skills" className="flex h-screen w-auto text-center justify-center space-x-5 items-center text-7xl bg-palette6">
+            <div className = "bg-white w-[300px] h-[400px] shadow-lg"></div>
+            <div className = "bg-white w-[300px] h-[400px] shadow-lg"></div>
+            <div className = "bg-white w-[300px] h-[400px] shadow-lg"></div>
+            <div className = "bg-white w-[300px] h-[400px] shadow-lg"></div>
         </div>
     );
 }

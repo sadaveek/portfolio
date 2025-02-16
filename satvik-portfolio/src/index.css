@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +8,8 @@
     @apply cursor-pointer
     hover:scale-[115%] duration-200
     active:scale-[105%] select-none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }
