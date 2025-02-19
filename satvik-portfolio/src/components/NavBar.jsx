@@ -5,15 +5,27 @@ import {useState, useEffect} from "react"
 
 function NavBar() {
 
-    const [nav, setNav] = useState(true)
-    const handleNav = () => (
-        setNav(!nav)
-    )
+    const [nav, setNav] = useState(true);
+    const [scrollLock, setScrollLock] = useState(false);
+
+    const handleNav = () => {
+        setNav(!nav);
+        setScrollLock(!scrollLock);
+    };
+
+    useEffect(() => {
+        if (scrollLock) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      }, [scrollLock]);
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 640) {
                 setNav(true);
+                setScrollLock(false);
             }
         };
         window.addEventListener("resize", handleResize);
@@ -34,8 +46,8 @@ function NavBar() {
                     {nav ? <img id = "hamburgerLogo" src = {HamburgerMenu} className="size-10 navbar-elements mr-2 justify-end z-50"></img> 
                         : <img id = "hamburgerLogo" src = {HamburgerClose} className="size-10 navbar-elements mr-2 justify-end z-50"></img>}
                 </div>
-                <div className={!nav ? "font-montserrat fixed left-0 top-0 w-[60%] h-full shadow-md ease-in-out duration-200 bg-gray-50 z-50 sm:hidden" :
-                    "font-montserrat fixed top-0 left-[-100%] ease-in-out duration-1000 w-[60%] h-full bg-gray-50 shadow-md z-50 sm:hidden"}>
+                <div className={!nav ? "z-[1000] fixed left-0 top-0 w-[60%] h-[120vh] shadow-md ease-in-out duration-200 bg-gray-50 sm:hidden" :
+                    "z-[1000] fixed top-0 left-[-100%] ease-in-out duration-1000 h-[120vh] w-[60%] bg-gray-50 shadow-md sm:hidden"}>
                     <ul className="flex-col pt-24 space-y-5 text-xl pl-6 inline-block">
                         <li className="navbar-elements"><a href= "#Home" onClick = {handleNav}>home</a></li>
                         <li className="navbar-elements"><a href= "#Skills" onClick = {handleNav}>skills</a></li>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import Home from './pages/Home.jsx'
-import Skills from './pages/Skills.jsx'
+import Home from './pages/Home.jsx';
+import Skills from './pages/Skills.jsx';
 import Projects from './pages/Projects.jsx';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
     }
   }, [scrollLock]);
 
-  return(
+  return (
     <>
       <Home />
       <Skills />
@@ -31,4 +31,5 @@ function App() {
     </>
   );
 }
+
 export default App;
