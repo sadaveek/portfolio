@@ -33,7 +33,6 @@ function Laptop() {
     const delayStart = useRef(null);
     const delay = 5000;
 
-    // Easing function
     function easeInOutQuad(t) {
         return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
     }
@@ -51,7 +50,7 @@ function Laptop() {
             }
 
             if (!startTime.current && !delayStart.current) {
-                laptopRef.current.position.set(0, 4, 30);
+                laptopRef.current.position.set(0, 2, 30);
                 laptopRef.current.rotation.set(0, Math.PI, 0);
             }
 
@@ -66,12 +65,12 @@ function Laptop() {
             const elapsed = now - startTime.current;
             const progress = elapsed < duration ? easeInOutQuad(elapsed / duration) : 1;
 
-            laptopRef.current.position.set(progress * 15, 4 - progress * 3, 30 + progress * -25);
+            laptopRef.current.position.set(progress * 15, 2 + progress, 30 + progress * -25);
             laptopRef.current.rotation.set(progress * (Math.PI / 15), Math.PI + progress * (9.5 * Math.PI / 2.5), 0);
 
             if (progress >= 1) {
                 laptopRef.current.rotation.set(Math.PI / 15, 2 * Math.PI / 2.5, 0);
-                laptopRef.current.position.set(15, 1, 5);
+                laptopRef.current.position.set(15, 3, 5);
             }
         } else {
             laptopRef.current.position.set(0, 3, 0);
@@ -80,7 +79,7 @@ function Laptop() {
     });
 
     return (
-        <group ref={laptopRef} className="absolute top-0 left-0">
+        <group ref={laptopRef} className="absolute top-0 left-0" scale={[1.1, 1.1, 1.1]}>
             <primitive object={scene} />
                 <Html
                     transform
@@ -88,6 +87,7 @@ function Laptop() {
                     position={[11.5, 14.5, 4.3]}
                     rotation={[Math.PI / 15, Math.PI, 0]}
                     scale={0.5}
+                    pointerEvents= "auto"
                 >
                     <Terminal />
                 </Html>
@@ -96,11 +96,22 @@ function Laptop() {
 }
 
 export default function LaptopModel() {
+
+    const [largeScreen, setLargeScreen] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => setLargeScreen(window.innerWidth > 1024);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
-        <div className="absolute bg-palette6 top-0 left-0 h-screen w-full -z-10">
-            <Canvas shadows camera={{ position: [0, 17, 50], fov: 50 }} dpr={[1, 2]}>
+        <>
+        <div className="absolute bottom-0 left-0 h-[calc(100vh-4rem)] w-full">
+            <Canvas shadows camera={{ position: [0, 17, 50], fov: 50 }} dpr={[1, 2]} >
                 <directionalLight
-                    position={[-15, 15, 15]}
+                    position={largeScreen ? [-15, 15, 15] : [-5, 5, 15]}
                     intensity={0.8}
                     castShadow
                     shadow-mapSize-width={4096}
@@ -124,5 +135,6 @@ export default function LaptopModel() {
                 <Environment preset="night" />
             </Canvas>
         </div>
+        </>
     );
 }

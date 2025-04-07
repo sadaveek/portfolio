@@ -12,7 +12,7 @@ const Terminal = () => {
   const [commands] = useState({
     help: "Available commands: help, clear, about, resume",
     clear: () => setHistory([]),
-    about: "My name is Satvik Malneedi, an I am a passionate learner, developer, and engineer. I am currently a student at Georgia Tech, studying Computer Engineering. Take a look through my website to learn more about my projects and skills!",
+    about: "My name is Satvik Malneedi, and I am a passionate learner, developer, and engineer. I am currently a student at Georgia Tech, studying Computer Engineering. Take a look through my website to learn more about my projects and skills!",
     resume: () => window.open(Resume),
   });
 
@@ -30,7 +30,6 @@ const Terminal = () => {
     }
 
     setInput("");
-
     setTimeout(() => inputRef.current?.focus(), 0);
   };
 
@@ -47,16 +46,6 @@ const Terminal = () => {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
     }
   }, [history]);
-
-  useEffect(() => {
-    const focusInterval = setInterval(() => {
-      if (document.activeElement !== inputRef.current && showTerminal) {
-        inputRef.current?.focus();
-      }
-    }, 100);
-
-    return () => clearInterval(focusInterval);
-  }, [showTerminal]);
 
   return (
     <div ref={terminalRef} className="absolute bg-black text-white p-10 h-[1100px] w-[1840px] overflow-y-auto">

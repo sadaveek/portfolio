@@ -10,6 +10,12 @@
     active:scale-[105%] select-none;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
+.ghost-slide {
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+.swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.4; /* Faded effect */
+    filter: blur(8px); /* Blurred effect */
+    transform: scale(0.85); /* Slightly smaller */
+}   

@@ -33,9 +33,9 @@ function NavBar() {
     }, []);
 
         return(
-            <div className = "flex justify-between items-center animate-fade-down animate-delay-[7000ms]">
-                <a href = "#Home"><img id = "myLogo" alt = "Website Logo" src={Logo} className="size-16 ml-3 z-50 navbar-elements"></img></a>
-                <ul className="text-palette5 space-x-5 text-xl my-3 z-50 hidden sm:flex">
+            <div className = "z-50 font-mona font-extralight flex justify-between items-center animate-fade-down animate-delay-[7000ms]">
+                <a href = "#Home"><img id = "myLogo" alt = "Website Logo" src={Logo} className="size-16 ml-3 navbar-elements"></img></a>
+                <ul className="bg-transparent text-palette5 space-x-5 text-xl my-3 hidden sm:flex">
                     <li className="navbar-elements"><a href= "#Home">home</a></li>
                     <li className="navbar-elements"><a href= "#Skills">skills</a></li>
                     <li className="navbar-elements"><a href= "#Projects">projects</a></li>
@@ -43,11 +43,11 @@ function NavBar() {
                     <li className="navbar-elements pr-6">contact</li>
                 </ul>
                 <div onClick = {handleNav} className="block sm:hidden">
-                    {nav ? <img id = "hamburgerLogo" src = {HamburgerMenu} className="size-10 navbar-elements mr-2 justify-end z-50"></img> 
-                        : <img id = "hamburgerLogo" src = {HamburgerClose} className="size-10 navbar-elements mr-2 justify-end z-50"></img>}
+                    {nav ? <img id = "hamburgerLogo" src = {HamburgerMenu} className="size-10 navbar-elements mr-2 justify-end"></img> 
+                        : <img id = "hamburgerLogo" src = {HamburgerClose} className="size-10 navbar-elements mr-2 justify-end"></img>}
                 </div>
-                <div className={!nav ? "z-[1000] fixed left-0 top-0 w-[60%] h-[120vh] shadow-md ease-in-out duration-200 bg-gray-50 sm:hidden" :
-                    "z-[1000] fixed top-0 left-[-100%] ease-in-out duration-1000 h-[120vh] w-[60%] bg-gray-50 shadow-md sm:hidden"}>
+                <div className={!nav ? "fixed left-0 top-0 w-[60%] h-[120vh] shadow-md ease-in-out duration-200 bg-gray-50 sm:hidden" :
+                    "fixed top-0 left-[-100%] ease-in-out duration-1000 h-[120vh] w-[60%] bg-gray-50 shadow-md sm:hidden"}>
                     <ul className="flex-col pt-24 space-y-5 text-xl pl-6 inline-block">
                         <li className="navbar-elements"><a href= "#Home" onClick = {handleNav}>home</a></li>
                         <li className="navbar-elements"><a href= "#Skills" onClick = {handleNav}>skills</a></li>

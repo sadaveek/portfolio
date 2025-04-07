@@ -12,12 +12,11 @@ export default {
         palette3: '#13505B',
         palette4: '#040404',
         palette5: '#D7D9CE',
-        palette6: '#0F1219',
+        palette6: '#0d1117',
       },
       fontFamily: {
-        barlow: ['Barlow Condensed', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
-        terminal: ["Courier Prime", "monospace"],
+        mona: ['Mona Sans', 'sans-serif'],
+        terminal: ['Courier Prime', 'monospace'],
       }
     },
   },
