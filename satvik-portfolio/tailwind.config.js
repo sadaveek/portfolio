@@ -11,7 +11,7 @@ export default {
         palette2: '#0C7489',
         palette3: '#13505B',
         palette4: '#040404',
-        palette5: '#D7D9CE',
+        palette5: '#161b22',
         palette6: '#0d1117',
       },
       fontFamily: {

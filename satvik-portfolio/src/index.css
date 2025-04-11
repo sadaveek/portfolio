@@ -15,7 +15,21 @@
 }
 
 .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.4; /* Faded effect */
-    filter: blur(8px); /* Blurred effect */
-    transform: scale(0.85); /* Slightly smaller */
-}   
+    opacity: 0.4;
+    filter: blur(8px);
+    transform: scale(0.85);
+}
+
+.gradient-rgb {
+    font-weight: bold;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 5s linear infinite;
+  }
+  
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }

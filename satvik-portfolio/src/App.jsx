@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setScrollLock(false);
-    }, 7000);
+    }, 0);
     return () => clearTimeout(timer);
   }, []);
 

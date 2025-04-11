@@ -35,7 +35,7 @@ function NavBar() {
         return(
             <div className = "z-50 font-mona font-extralight flex justify-between items-center animate-fade-down animate-delay-[7000ms]">
                 <a href = "#Home"><img id = "myLogo" alt = "Website Logo" src={Logo} className="size-16 ml-3 navbar-elements"></img></a>
-                <ul className="bg-transparent text-palette5 space-x-5 text-xl my-3 hidden sm:flex">
+                <ul className="bg-transparent text-white space-x-5 text-xl my-3 hidden sm:flex">
                     <li className="navbar-elements"><a href= "#Home">home</a></li>
                     <li className="navbar-elements"><a href= "#Skills">skills</a></li>
                     <li className="navbar-elements"><a href= "#Projects">projects</a></li>

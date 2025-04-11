@@ -26,7 +26,7 @@ function MatrixEffect() {
         ctx.fillStyle = "rgba(13, 17, 23, 0.4)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.fillStyle = "#fff";
+        ctx.fillStyle = `hsl(${Math.random() * 360}, 100%, 75%)`;
         ctx.font = "20px font-mona";
 
         const drops = dropsRef.current;
