@@ -36,7 +36,7 @@ const Terminal = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowTerminal(true);
-    }, 7000);
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -51,7 +51,7 @@ const Terminal = () => {
     <div ref={terminalRef} className="absolute bg-black text-white p-10 h-[1100px] w-[1840px] overflow-y-auto">
       {!showTerminal && (
         <div className="text-9xl h-screen flex items-center justify-center font-light" style={{ textShadow: "0 0 5px #fff" }}>
-          <Typewriter words={["Hey, I'm Satvik.", ""]} cursor="|" autoStart={false} typeSpeed={70} deleteSpeed={40} delaySpeed={4000} />
+          <Typewriter words={["Hey, I'm Satvik.", ""]} cursor="|" autoStart={false} typeSpeed={70} deleteSpeed={40} delaySpeed={2000} />
         </div>
       )}
       {showTerminal && (

@@ -53,7 +53,7 @@ function MatrixEffect() {
 
         const timeout = setTimeout(() => {
             intervalRef.current = setInterval(drawMatrix, 50);
-        }, 7000);
+        }, 5000);
 
         return () => {
             clearTimeout(timeout);

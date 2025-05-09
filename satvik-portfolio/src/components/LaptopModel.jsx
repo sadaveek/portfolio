@@ -31,7 +31,7 @@ function Laptop() {
     const duration = 2500;
     const startTime = useRef(null);
     const delayStart = useRef(null);
-    const delay = 5000;
+    const delay = 4000;
 
     function easeInOutQuad(t) {
         return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
@@ -88,6 +88,7 @@ function Laptop() {
                     rotation={[Math.PI / 15, Math.PI, 0]}
                     scale={0.5}
                     pointerEvents= "auto"
+                    style= {{zIndex: 0}}
                 >
                     <Terminal />
                 </Html>
@@ -109,7 +110,7 @@ export default function LaptopModel() {
     return (
         <>
         <div className="absolute bottom-0 left-0 h-[calc(100vh-4rem)] w-full">
-            <Canvas shadows camera={{ position: [0, 17, 50], fov: 50 }} dpr={[1, 2]} >
+            <Canvas shadows camera={{ position: [0, 17, 50], fov: 50 }} dpr={[1, 2]} className = "z-0">
                 <directionalLight
                     position={largeScreen ? [-15, 15, 15] : [-5, 5, 15]}
                     intensity={0.8}

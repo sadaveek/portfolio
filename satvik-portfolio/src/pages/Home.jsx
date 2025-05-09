@@ -7,9 +7,9 @@ function Home() {
     return(
         <div id = "Home" className="relative h-screen w-auto bg-palette6">
             <MatrixEffect className = "font-terminal" />
-            <NavBar />
             <DynamicText />
             <LaptopModel />
+            <NavBar />
         </div>
     );
 }

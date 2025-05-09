@@ -5,9 +5,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import { motion } from "motion/react";
-import { IoHardwareChipOutline, IoPeople, IoPeopleSharp  } from "react-icons/io5";
+import { IoPeopleSharp, IoCodeSlashOutline } from "react-icons/io5";
 import { GiLogicGateNor, GiCpu } from "react-icons/gi";
-import { PiComputerTowerDuotone } from "react-icons/pi";
 import { SiArduino, SiC, SiJavascript, SiTailwindcss, SiHtml5, SiCss3,
         SiAssemblyscript, SiNextdotjs, SiMongodb, SiVite, SiJupyter } from "react-icons/si";
 import { FaComputer } from "react-icons/fa6";
@@ -15,6 +14,7 @@ import { FaJava, FaPython, FaReact, FaGitAlt, FaUbuntu, FaDocker, FaGithub, FaRe
 import { FaPeopleCarryBox } from "react-icons/fa6";
 import { MdPhoneInTalk } from "react-icons/md";
 import { LuBicepsFlexed, LuBrain, LuSpeech } from "react-icons/lu";
+import { TbCircuitBattery } from "react-icons/tb";
 
 
 import Card from "../components/Card";
@@ -22,12 +22,12 @@ import Card from "../components/Card";
 function Skills() {
     return (
         <>
-        <div id="Skills" className="relative h-[100vh] w-full bg-palette6 flex items-center justify-center overflow-hidden pt-8">
+        <div id="Skills" className="font-mona relative h-[100vh] w-full bg-palette6 flex items-center justify-center overflow-hidden pt-8">
             <motion.h1 initial={{opacity: 0, y: 40}} whileInView = {{ opacity: 1, y: 0}} transition = {{duration: 0.6, ease: "easeInOut"}} viewport={{once: true}} className="absolute top-[.5vw] text-[10vh] font-mona font-bold gradient-rgb z-50 mt-10 rounded-sm px-2"
             style = {{WebkitTextStroke: '2px #ffffff', WebkitTextStrokeWidth: '0.75px', textShadow: '0 0 6px'}}>
                 My Skills
             </motion.h1>
-            <motion.h2 initial={{opacity: 0, y: -40}} whileInView = {{ opacity: .10, y: 0}} transition = {{duration: 1, ease: "easeInOut"}} viewport={{once: true}} className="absolute text-center font-mona lg:text-[30vw] text-[75vw] text-white italic opacity-5 whitespace-nowrap select-none">
+            <motion.h2 initial={{opacity: 0, y: -40}} whileInView = {{ opacity: .10, y: 0}} transition = {{duration: 1, ease: "easeInOut"}} viewport={{once: true}} className="absolute text-center font-mona lg:text-[25vw] text-[75vw] text-white italic opacity-5 whitespace-nowrap select-none">
                 Expertise
             </motion.h2>
 
@@ -49,7 +49,7 @@ function Skills() {
                 >
                     <SwiperSlide className="ghost-slide pt-10 my-10">
                         <Card color1="#0a0a0a" color2="#0f172a" title="Engineering Fundamentals" description="A strong foundation in engineering principles is at the core of my work. From circuit analysis and digital logic, 
-                        I apply core concepts to real-world problems with precision and curiosity." image= {<IoHardwareChipOutline className = "size-[25vw]"/>}   techStack={[
+                        I apply core concepts to real-world problems with precision and curiosity." image= {<TbCircuitBattery className = "size-[25vw]"/>}   techStack={[
                             { name: "Digital Logic", icon: <GiLogicGateNor className = "text-red-700" /> },
                             { name: "Microcontrollers", icon: <SiArduino className = "text-teal-500"/> },
                             { name: "HDL (Verilog)", icon: <FaComputer className = "text-green-400"/> },
@@ -58,9 +58,9 @@ function Skills() {
                           ]}/>
                     </SwiperSlide>
                     <SwiperSlide className="ghost-slide pt-10 my-10">
-                        <Card color1="#161b22" color2="#1f2937" title="Software Engineering" description="I program to build software systems that are efficient, 
+                        <Card color1="#0a0a0a" color2="#0f172a" title="Software Engineering" description="I program to build software systems that are efficient, 
                         reliable, and maintainable. Whether it's backend development, frontend experiences, or data processing, I focus on writing clean, functional code to 
-                        solve real problems." image= {<PiComputerTowerDuotone className = "size-[25vw]"/>}   techStack={[
+                        solve real problems." image= {<IoCodeSlashOutline className = "size-[25vw]"/>}   techStack={[
                             { name: "Java", icon: <FaJava className = "text-[#5382a1]" /> },
                             { name: "Python", icon: <FaPython className = "text-white"/> },
                             { name: "JavaScript", icon: <SiJavascript className = "text-yellow-400"/> },
@@ -81,7 +81,7 @@ function Skills() {
                           ]}/>
                     </SwiperSlide>
                     <SwiperSlide className="ghost-slide pt-10 my-10">
-                        <Card color1="#21262d" color2="#323b4a" title="Interpersonal" description="Above all, what matters most 
+                        <Card color1="#0a0a0a" color2="#0f172a" title="Interpersonal" description="Above all, what matters most 
                         to me is applying my skills in a collaborative environment. I value the ability to lead 
                         and listen simultaneously—building ideas not just from myself, but alongside my peers. 
                         It’s a crucial part of how I work and grow." image= {<IoPeopleSharp className = "size-[25vw]"/>}   techStack={[

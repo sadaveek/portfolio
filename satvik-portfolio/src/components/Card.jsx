@@ -5,16 +5,14 @@ function Card({ color1, color2, title, image, description, techStack = []}) {
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} perspective={2000} glareEnable={true} glareMaxOpacity={0}>
             <div 
                 style={{ background: `linear-gradient(180deg, ${color1}, ${color2})` }}
-                className="w-[90%] max-w-5xl mx-auto rounded-2xl p-4 sm:p-5 md:p-3 shadow-2xl text-white border-white border-4"
+                className="w-[90%] max-w-5xl mx-auto rounded-2xl p-10 sm:p-5 md:p-3 shadow-2xl text-white border-white border-4"
             >
                 <div className="flex flex-col lg:flex-row sm:pt-5 items-center gap-4 sm:gap-5 md:gap-6">
-                    {/* Left column (Title and description) */}
-                    <div className="lg:w-1/2 flex flex-col justify-center text-center">
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 md:mb-4 text-transparent" style = {{WebkitTextStroke: '2px #ffffff', WebkitTextStrokeWidth: '0.75px', textShadow: '0 0 3px'}}>{title}</h1>
+                    <div className="lg:w-3/5 flex flex-col justify-center text-center">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 md:mb-4">{title}</h1>
                         <p className="text-sm sm:text-base md:text-lg" style = {{textShadow: '0 0 2px'}}>{description}</p>
                     </div>
                     
-                    {/* Right column (Image) */}
                     <div className="lg:w-2/5 flex h-auto items-center justify-center mt-4 lg:mt-0">{image}</div>
                     <div className = "xl:flex hidden flex-wrap gap-3 justify-center">
                         {techStack.map(({ name, icon }, idx) => (

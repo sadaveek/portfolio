@@ -17,7 +17,7 @@
             return (
                 <div
                     className="absolute font-mona bottom-0 flex items-center justify-center text-white select-none 
-                    animate-delay-[7000ms] lg:h-[calc(95vh-4rem)] lg:w-[25%] lg:pl-24 lg:pb-10 
+                    animate-delay-[5500ms] lg:h-[calc(95vh-4rem)] lg:w-[25%] lg:pl-24 lg:pb-10 
                     lg:text-[4.5vw] lg:animate-fade-right h-[25vh] w-full mb-10 text-[7vw] animate-fade-up text-center"
                     style={{ textShadow: '0 0 3px #fff' }}
                 >
