@@ -20,7 +20,7 @@ function AccordionSection({
   return (
     <div className="flex flex-col justify-center my-2 w-[90vw]">
       <button
-        className="w-full rounded-md border border-gray-400 sm:text-lg text-[3vw] bg-[#0f172a] shadow-md px-4 py-2 text-left hover:scale-[1.01] transition-transform duration-200 ease-in-out"
+        className="w-full rounded-md border border-gray-400 sm:text-lg text-[2.6vw] bg-[#0f172a] shadow-md px-4 py-2 text-left hover:scale-[1.01] transition-transform duration-200 ease-in-out"
         onClick={toggleAccordion}
       >
         <div className="flex justify-between items-center">

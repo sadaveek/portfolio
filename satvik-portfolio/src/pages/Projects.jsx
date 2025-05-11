@@ -81,7 +81,7 @@ function Projects() {
             return (
               <motion.div 
                 key={project.title}
-                className={`absolute md:w-4/5 md:mt-0 max-w-[50vh] md:max-w-none mt-36 shadow-2xl hover:scale-105 hover:rotate-[-2deg] hover:cursor-pointer active:scale-100 transition-transform duration-300 ${activeProject === index ? 'pointer-events-auto' : 'pointer-events-none'}`}
+                className={`absolute mb-3 md:w-4/5 md:mt-0 max-w-[50vh] md:max-w-none mt-36 shadow-2xl hover:scale-105 hover:rotate-[-2deg] hover:cursor-pointer active:scale-100 transition-transform duration-300 ${activeProject === index ? 'pointer-events-auto' : 'pointer-events-none'}`}
                 style={{ opacity: projectProgress }}
               >
                 <img 
