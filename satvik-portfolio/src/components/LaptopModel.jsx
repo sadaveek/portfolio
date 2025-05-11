@@ -4,7 +4,7 @@ import { useGLTF, Environment, Html } from "@react-three/drei";
 import Terminal from "./Terminal";
 
 function Laptop() {
-    const { scene } = useGLTF("/laptop.glb");
+    const { scene } = useGLTF(import.meta.env.BASE_URL + "laptop.glb");
     const laptopRef = useRef();
     const [largeScreen, setLargeScreen] = useState(true);
     const [animationCancel, setAnimationCancel] = useState(false);
