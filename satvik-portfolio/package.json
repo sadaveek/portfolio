@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sadaveek.github.io/portfolio",
+  "homepage": "https://sadaveek.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
