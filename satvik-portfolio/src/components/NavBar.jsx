@@ -2,13 +2,10 @@ import Logo from "../assets/ChipLogo.png"
 import HamburgerMenu from "../assets/HamburgerIcon.png"
 import HamburgerClose from "../assets/CloseButton.png"
 import {useState, useEffect} from "react"
-import useLenisScroll from "../hooks/useLenisScroll.jsx"
 
 function NavBar() {
     const [nav, setNav] = useState(true);
     const [scrollLock, setScrollLock] = useState(false);
-
-    useLenisScroll({ duration: 1.6, offset: 0 });
 
     const handleNav = () => {
         setNav(!nav);
@@ -37,12 +34,12 @@ function NavBar() {
         return(
             <div className = "font-mona font-extralight flex justify-between items-center animate-fade-down animate-delay-[5000ms]">
                 <a href = "#Home"><img id = "myLogo" alt = "Website Logo" src={Logo} className="size-16 ml-3 navbar-elements"></img></a>
-                <ul className="bg-transparent text-white space-x-5 text-xl my-3 hidden sm:flex">
+                <ul className="bg-transparent text-white space-x-5 text-xl my-3 pr-2 hidden sm:flex">
                     <li className="navbar-elements"><a href= "#Home">home</a></li>
                     <li className="navbar-elements"><a href= "#Skills">skills</a></li>
                     <li className="navbar-elements"><a href= "#Projects">projects</a></li>
                     <li className="navbar-elements"><a href= "#Experience">experience</a></li>
-                    <li className="navbar-elements pr-6">contact</li>
+                    <li className="navbar-elements pr-6"><a href= "#Contact">contact</a></li>
                 </ul>
                 <div onClick = {handleNav} className="block sm:hidden">
                     {nav ? <img id = "hamburgerLogo" src = {HamburgerMenu} className="size-10 navbar-elements mr-2 justify-end"></img> 
@@ -54,8 +51,8 @@ function NavBar() {
                         <li className="navbar-elements"><a href= "#Home" onClick = {handleNav}>home</a></li>
                         <li className="navbar-elements"><a href= "#Skills" onClick = {handleNav}>skills</a></li>
                         <li className="navbar-elements" ><a href= "#Projects" onClick = {handleNav}>projects</a></li>
-                        <li className="navbar-elements">experience</li>
-                        <li className="navbar-elements">contact</li>
+                        <li className="navbar-elements"><a href= "#Experience">experience</a></li>
+                        <li className="navbar-elements"><a href= "#Contact">contact</a></li>
                     </ul>
                 </div>
             </div>

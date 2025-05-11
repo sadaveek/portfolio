@@ -1,14 +1,13 @@
-import { useEffect, useRef, useState } from 'react';
-import Lenis from '@studio-freight/lenis';
+import { useEffect, useState } from 'react';
 import Home from './pages/Home.jsx';
 import Skills from './pages/Skills.jsx';
 import Projects from './pages/Projects.jsx';
 import Experience from './pages/Experience.jsx';
 import Contact from './pages/Contact.jsx';
+import useLenisScroll from './hooks/useLenisScroll.jsx';
 
 function App() {
   const [scrollLock, setScrollLock] = useState(true);
-  const lenisRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -18,27 +17,17 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (scrollLock) return;
-
-    const lenis = new Lenis();
-
-    lenisRef.current = lenis;
-
-    const raf = (time) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-
-    requestAnimationFrame(raf);
-
+    if (scrollLock) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
     return () => {
-      lenis.destroy();
+      document.body.style.overflow = 'auto';
     };
   }, [scrollLock]);
 
-  useEffect(() => {
-    document.body.style.overflow = scrollLock ? 'hidden' : 'auto';
-  }, [scrollLock]);
+  useLenisScroll({ duration: 1.2, offset: 0 });
 
   return (
     <div className="font-sans">

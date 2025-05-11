@@ -10,10 +10,26 @@ const Terminal = () => {
   const inputRef = useRef(null);
 
   const [commands] = useState({
-    help: "Available commands: help, clear, about, resume",
+    help: "Available commands: help, clear, about, resume, contact, cd [section]",
     clear: () => setHistory([]),
     about: "My name is Satvik Malneedi, and I am a passionate learner, developer, and engineer. I am currently a student at Georgia Tech, studying Computer Engineering. Take a look through my website to learn more about my projects and skills!",
     resume: () => window.open(Resume),
+    contact: `📧 Email: samalneedi@gmail.com\n🔗 LinkedIn: https://www.linkedin.com/in/satvikmalneedi/ \n 🐱 GitHub: github.com/sadaveek`,
+    cd: (section) => {
+      if (!section) {
+        setHistory((prev) => [...prev, `> cd`, "Please specify a section name."]);
+        return;
+      }
+      const capitalized = section.charAt(0).toUpperCase() + section.slice(1).toLowerCase();
+      const el = document.getElementById(capitalized);
+
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        setHistory((prev) => [...prev, `> cd ${section}`, `Navigating to ${capitalized}...`]);
+      } else {
+        setHistory((prev) => [...prev, `> cd ${section}`, `Section not found: ${section}`]);
+      }
+    }
   });
 
   const handleInput = (e) => setInput(e.target.value);
@@ -21,14 +37,18 @@ const Terminal = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!input.trim()) return;
-
-    let response = commands[input] || `Command not found: ${input}`;
-    if (typeof response === "function") {
-      response();
+  
+    const [cmd, ...args] = input.trim().split(" ");
+    const command = commands[cmd];
+  
+    if (typeof command === "function") {
+      command(...args);
+    } else if (typeof command === "string") {
+      setHistory((prevHistory) => [...prevHistory, `> ${input}`, command]);
     } else {
-      setHistory((prevHistory) => [...prevHistory, `> ${input}`, response]);
+      setHistory((prevHistory) => [...prevHistory, `> ${input}`, `Command not found: ${input}`]);
     }
-
+  
     setInput("");
     setTimeout(() => inputRef.current?.focus(), 0);
   };

@@ -37,8 +37,8 @@ function Skills() {
                     effect="coverflow"
                     centeredSlides={true}
                     slidesPerView={1.3}
+                    navigation= {true}
                     loop={false}
-                    navigation = {{ clickable: true, color: "#ffffff", size: "1.5rem"}}
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 50,
@@ -96,6 +96,14 @@ function Skills() {
                 </Swiper>
             </motion.div>
         </div>
+        <style>
+            {`
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: white !important;
+            }
+            `}
+        </style>
         </>
     );
 }

@@ -4,7 +4,7 @@ import LinkedinPFP from "../assets/LinkedinPFP.jpeg";
 
 function Contact() {
     return (
-        <div className="relative h-[50vh] w-full bg-gray-100 flex flex-col items-center justify-center text-center p-6 shadow-md rounded-lg">
+        <div id = "Contact" className="relative h-[50vh] w-full bg-gray-100 flex flex-col items-center justify-center text-center p-6 shadow-md rounded-lg">
             <img 
                 src= {LinkedinPFP}
                 alt="Photo of my ahhh" 

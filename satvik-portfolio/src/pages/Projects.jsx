@@ -14,6 +14,7 @@ const projects = [
     title: "Folio Website",
     description: "This folio website, which utilizes React and Tailwind CSS and libraries such as Motion and Three.js to create a responsive and visually appealing design. It showcases my projects, skills, and experience in a user-friendly format.",
     image: FolioWebsite,
+    link: "https://github.com/sadaveek/portfolio"
   },
 ];
 
@@ -80,7 +81,7 @@ function Projects() {
             return (
               <motion.div 
                 key={project.title}
-                className={`absolute md:w-4/5 md:mt-0 mt-60 shadow-2xl hover:scale-105 hover:rotate-[-2deg] hover:cursor-pointer active:scale-100 transition-transform duration-300 ${activeProject === index ? 'pointer-events-auto' : 'pointer-events-none'}`}
+                className={`absolute md:w-4/5 md:mt-0 max-w-[50vh] md:max-w-none mt-36 shadow-2xl hover:scale-105 hover:rotate-[-2deg] hover:cursor-pointer active:scale-100 transition-transform duration-300 ${activeProject === index ? 'pointer-events-auto' : 'pointer-events-none'}`}
                 style={{ opacity: projectProgress }}
               >
                 <img 
