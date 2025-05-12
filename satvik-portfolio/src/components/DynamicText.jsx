@@ -25,7 +25,7 @@
                         words={[
                             "Computer Engineering Student at Georgia Tech.",
                             "Software Developer.",
-                            "Web Developer.",
+                            "Computer Engineer.",
                             "Tech Enthusiast.",
                             "Learner.",
                         ]}
@@ -47,7 +47,7 @@
                         words={[
                             "Computer Engineering Student at Georgia Tech.",
                             "Software Developer.",
-                            "Web Developer.",
+                            "Computer Engineer.",
                             "Tech Enthusiast.",
                             "Learner.",
                         ]}

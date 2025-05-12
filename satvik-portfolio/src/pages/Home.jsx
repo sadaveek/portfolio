@@ -25,7 +25,6 @@ function Home() {
             <MatrixEffect className="font-terminal" />
             <DynamicText />
             <LaptopModel />
-            <NavBar />
             <motion.div
                 initial={{ opacity: 0, x: 10 }}
                 animate = {{opacity: 1, x: 0, transition: {delay: 5, duration: 0.6, ease: "easeInOut"}}}
@@ -37,6 +36,7 @@ function Home() {
             >
                 Resume
             </motion.div>
+            <NavBar />
         </div>
     );
 }
