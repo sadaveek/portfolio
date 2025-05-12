@@ -71,7 +71,7 @@ function AccordionSection({
                 </div>
               </div>
 
-              <div className="md:w-1/3 w-full flex flex-col items-center justify-start gap-2">
+              <div className="md:w-1/3 w-full flex flex-col items-center justify-start gap-2 sm:text-base text-[3.5vw]">
                 <a
                   href={link}
                   target="_blank"
