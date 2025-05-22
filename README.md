@@ -81,5 +81,5 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🙋‍♂️ About Me
 
-I'm Satvik Malneedi — a Computer Engineering student passionate about software, chip design, and the intersection between hardware and software.  
+I'm Satvik Malneedi, a Computer Engineering student passionate about software, chip design, and the intersection between hardware and software.  
 Check out the site above or connect with me via [LinkedIn](https://www.linkedin.com/in/sadaveek/).
