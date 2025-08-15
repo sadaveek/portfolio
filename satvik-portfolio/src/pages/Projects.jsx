@@ -2,19 +2,27 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import EcoRoute from "../assets/EcoRoute.png"
 import FolioWebsite from "../assets/FolioWebsite.png"
+import RiscvEmulator from "../assets/riscvemulator.png"
+
 
 const projects = [
   {
-    title: "EcoRoute",
-    description: "A website that pulls from several different APIs such as the Google Maps API and the Carbon Interface API in order to calculate the carbon emmissions of a route.",
-    image: EcoRoute,
-    link: "https://github.com/sadaveek/energyhacks"
+    title: "RISC-V Python Emulator",
+    description: "A Python-based RISC-V emulator supporting .s files, .data/.text segments, directives, and xN register naming. Includes an interactive debugger and CLI tools for assembling, running, and inspecting programs.",
+    image: RiscvEmulator,
+    link: "https://github.com/satvikmalneedi/riscv-emulator"
   },
   {
     title: "Folio Website",
     description: "This folio website, which utilizes React and Tailwind CSS and libraries such as Motion and Three.js to create a responsive and visually appealing design. It showcases my projects, skills, and experience in a user-friendly format.",
     image: FolioWebsite,
-    link: "https://github.com/sadaveek/portfolio"
+    link: "https://github.com/satvikmalneedi/portfolio"
+  },
+  {
+    title: "EcoRoute",
+    description: "A website that pulls from several different APIs such as the Google Maps API and the Carbon Interface API in order to calculate the carbon emmissions of a route.",
+    image: EcoRoute,
+    link: "https://github.com/satvikmalneedi/energyhacks"
   },
 ];
 

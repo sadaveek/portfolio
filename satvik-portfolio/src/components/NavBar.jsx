@@ -2,7 +2,7 @@ import Logo from "../assets/ChipLogo.png";
 import HamburgerMenu from "../assets/HamburgerIcon.png";
 import HamburgerClose from "../assets/CloseButton.png";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // ✅ use motion from framer-motion
+import { motion } from "framer-motion";
 
 function NavBar() {
   const [nav, setNav] = useState(true);

@@ -17,7 +17,7 @@ function Contact() {
                 <p className="text-lg text-white font-medium">Email: samalneedi@gmail.com</p>
             </div>
             <div className="flex space-x-6 mt-4">
-                <a href="https://github.com/sadaveek" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-300 text-2xl navbar-elements">
+                <a href="https://github.com/satvikmalneedi" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-300 text-2xl navbar-elements">
                     <FaGithub />
                 </a>
                 <a href="https://www.linkedin.com/in/satvikmalneedi/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-2xl navbar-elements">
